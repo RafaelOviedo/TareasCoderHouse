@@ -33,7 +33,7 @@ function muestraPizzas() {
     for (let i = 0; i < pizzas.length; i++) {
         alert(`Las pizzas disponibles son: 
                 
-                ${pizzas[i].name} 
+                ${pizzas[i].name} $ ${pizzas[i].price}
                 
     Cual elegis?`);
     }
@@ -57,7 +57,7 @@ function muestraPizzas() {
         if (eleccionDeBebida === "si") {
             alert(`Las bebidas disponibles son: 
                 
-                ${bebidas[i].name} 
+                ${bebidas[i].name} $ ${bebidas[i].price}
                 
     Cual elegis?`);
         } else if (
