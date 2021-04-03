@@ -1,9 +1,8 @@
 //-----------------------------------------
 // MUESTRA MENSAJE BIENVENIDA
 //-----------------------------------------
-let welcome = prompt("Para crear su pedido escriba 'comenzar'");
 
-let pizzasOhambur = alert("Bienvenido, que pizza deseas elegir?");
+alert("Bienvenido, que pizza deseas elegir?");
 
 //-----------------------------------------
 // VARIABLES DE PRODUCTOS
@@ -27,75 +26,66 @@ let bebidas = [
 //-----------------------------------------------
 // HACIENDO UN PEDIDO
 //-----------------------------------------------
+let pizzaElegida;
+let bebidaElegida;
 
-// el for itera en el array pizzas y muestra todos los items
-function muestraPizzas() {
+function eleccionPizza() {
+    // el for itera en el array pizzas y muestra todos los items
     for (let i = 0; i < pizzas.length; i++) {
         alert(`Las pizzas disponibles son: 
                 
-                ${pizzas[i].name} $ ${pizzas[i].price}
+                ${pizzas[i].name} ${pizzas[i].price}$
                 
     Cual elegis?`);
     }
 
     // se elige un producto y te muestra dicha eleccion
-    let pizzaOHamburElegida = prompt("Que pizza vas a elegir?");
-    if (
-        pizzaOHamburElegida === "mozzarella" ||
-        pizzaOHamburElegida === "napo" ||
-        pizzaOHamburElegida === "fugazzeta" ||
-        pizzaOHamburElegida === "jamon"
-    ) {
-        alert(`Tu eleccion ha sido: ${pizzaOHamburElegida}`);
-    }
-
-    // esta vez el for itera en el array de bebidas
-    // te pregunta si quieres algo para tomar, si elijes si, te muestra los productos y
-    // si elijes no, te muestra el total de tu pedido hasta ese momento
-    let eleccionDeBebida = prompt("Queres algo para tomar?");
-    for (let i = 0; i < bebidas.length; i++) {
-        if (eleccionDeBebida === "si") {
-            alert(`Las bebidas disponibles son: 
-                
-                ${bebidas[i].name} $ ${bebidas[i].price}
-                
-    Cual elegis?`);
-        } else if (
-            eleccionDeBebida === "no" &&
-            pizzaOHamburElegida === pizzas[i].name
-        ) {
-            alert(`El total de tu pedido son: ${pizzas[i].price}`);
-            alert(`Gracias por su compra!`);
-            continue;
-        }
-    }
-
-    // luego de elejir el producto te muestra dicha eleccion
-    var bebidaElegida = prompt("Que bebida vas a elegir?");
-    if (
-        bebidaElegida === "coca lata" ||
-        bebidaElegida === "coca botella" ||
-        bebidaElegida === "fanta lata" ||
-        bebidaElegida === "7up lata" ||
-        bebidaElegida === "agua"
-    ) {
-        alert(`Tu eleccion ha sido: ${bebidaElegida}`);
-    }
-
-    // al final del pedido, se muestra el resultado del precio final de los productos elegidos
-    let valorTotal = 0;
+    let eleccionDePizza = prompt("Que pizza vas a elegir?");
     for (let i = 0; i < pizzas.length; i++) {
-        for (let j = 0; j < bebidas.length; j++) {
-            if (
-                pizzaOHamburElegida === pizzas[i].name &&
-                bebidaElegida === bebidas[j].name
-            ) {
-                valorTotal = pizzas[i].price + bebidas[j].price;
-                alert(`El total de tu pedido es ${valorTotal}`);
-                alert(`Gracias por su compra!`);
-            }
+        if (eleccionDePizza === pizzas[i].name) {
+            pizzaElegida = pizzas[i];
+            alert(`Tu eleccion ha sido: ${pizzas[i].name} ${pizzas[i].price}$`);
         }
     }
 }
 
-muestraPizzas();
+function eleccionBebida() {
+    // esta vez el for itera en el array de bebidas
+    // te pregunta si quieres algo para tomar, si elijes si, te muestra los productos y
+    // si elijes no, te muestra el total de tu pedido hasta ese momento
+    let siOno = prompt("Queres algo para tomar?");
+    if (siOno === "si") {
+        for (let i = 0; i < bebidas.length; i++) {
+            alert(`Las bebidas disponibles son: 
+                
+                ${bebidas[i].name} ${bebidas[i].price}$
+                
+    Cual elegis?`);
+        }
+
+        // luego de elejir el producto te muestra dicha eleccion
+        let eleccionDeBebida = prompt("Que bebida vas a elegir?");
+        for (let i = 0; i < bebidas.length; i++) {
+            if (bebidas[i].name === eleccionDeBebida) {
+                bebidaElegida = bebidas[i];
+                alert(
+                    `Tu eleccion ha sido: ${bebidas[i].name} ${bebidas[i].price}$`
+                );
+            }
+        }
+    } else if (siOno === "no") {
+        alert(`El total de tu pedido son: ${pizzaElegida.price}$`);
+        alert(`Gracias por su compra!`);
+    }
+}
+
+function totalPedido() {
+    // suma los productos elegidos y da el total
+    let total = pizzaElegida.price + bebidaElegida.price;
+    alert(`El total de tu pedido son: ${total}$
+    Gracias por su compra!`);
+}
+
+eleccionPizza();
+eleccionBebida();
+totalPedido();
