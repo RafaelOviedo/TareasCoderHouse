@@ -32,8 +32,16 @@ window.addEventListener("scroll", function () {
 
 function closeLateralBar() {
     document.getElementById("lateral-bar").style.width = "0px";
+    document.getElementById("lateral-bar").style.borderLeft = "";
 }
 
 function openLateralBar() {
     document.getElementById("lateral-bar").style.width = "400px";
+    document.getElementById("lateral-bar").style.borderLeft = "2px solid black";
+    document.getElementById("lateral-bar").style.borderBottom =
+        "2px solid black";
 }
+
+// contador de carrito en click de producto
+
+// let cartBtn = document.getElementById("cart-btn");
