@@ -32,10 +32,14 @@
 
         <div id="lateral-bar">
             <div id="close-btn" onclick="closeLateralBar()">&times;</div>
-            <!-- <div>Produtos elegidos:</div>
-            <div>Total:</div> -->
+            <div id="cart-text">Cart</div>
+            <div class="cart-box-items"></div>
+            <div>
+                <strong class="totalTitle">Total:</strong>
+                <span class="totalPrice">$0</span>
+            </div>
+            <button class="purchase-btn">Comprar</button>
         </div>
-
         <!-- LATERAL BAR  -->
 
         <!-- CART BUTTON -->
@@ -84,137 +88,133 @@
                     <div class="titulo">Que vas a comer hoy?</div>
                     <div class="pizzas">Pizzas a elegir</div>
 
-                    <!-- agregando fotos de los pizza items -->
+                    <!-- definiendo items dentro del menu -->
 
                     <div class="muzza all-items">
                         <img
                             src="https://images.unsplash.com/photo-1615516687220-68f5fb1c1b31?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpenphJTIwbW96emFyZWxsYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                             alt="pizza mozzarella photo"
-                            class="pizzas-photo"
+                            class="item-image"
                             id="pizza-muzza"
                         />
-                        <h3>Muzzarella</h3>
-                        <p>490$</p>
+                        <h3 class="item-title">Muzzarella</h3>
+                        <p class="item-price">490$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="napo all-items">
                         <img
                             src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHRvbWF0byUyMHBpenphfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                             alt="pizza napo photo"
-                            class="pizzas-photo"
+                            class="item-image"
                         />
-                        <h3>Napolitana</h3>
-                        <p>530$</p>
+                        <h3 class="item-title">Napolitana</h3>
+                        <p class="item-price">530$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="fugazzeta all-items">
                         <img
                             src="http://embed.widencdn.net/img/beef/pz4eba64j5/exact/beef-pepper-and-onion-pizza-horizontal.tif?keep=c&u=7fueml"
                             alt="pizza fugazzeta photo"
-                            class="pizzas-photo"
+                            class="item-image"
                         />
-                        <h3>Fugazzeta</h3>
-                        <p>500$</p>
+                        <h3 class="item-title">Fugazzeta</h3>
+                        <p class="item-price">500$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="jamon-y-morron all-items">
                         <img
                             src="https://www.thespruceeats.com/thmb/YOqlotMR-hYHWCraqecMRZJa-5U=/2492x1869/smart/filters:no_upscale()/Prosciuttopizzahoriz-d8f1759cf683436aae8f2d184b3267fb.jpg"
                             alt="pizza jamon y morron photo"
-                            class="pizzas-photo"
+                            class="item-image"
                         />
-                        <h3>Jamon y morron</h3>
-                        <p>530$</p>
+                        <h3 class="item-title">Jamon y morron</h3>
+                        <p class="item-price">530$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
 
                     <div class="burgers">Hamburguesas a elegir</div>
 
-                    <!-- agregando fotos de los burger items -->
-
                     <div class="simple all-items">
                         <img
                             src="https://media.timeout.com/images/105305545/630/472/image.jpg"
                             alt="burger simple photo"
-                            class="burgers-photo"
+                            class="item-image"
                         />
-                        <h3>Burger Simple</h3>
-                        <p>420$</p>
+                        <h3 class="item-title">Burger Simple</h3>
+                        <p class="item-price">420$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="doble all-items">
                         <img
                             src="https://i.guim.co.uk/img/media/8e2f6ac9af1c5dffda6bc49bb10cd9871f471ab7/0_139_2085_1251/master/2085.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=2fa78672f62d806b6d7b93f255a6af6b"
                             alt="burger doble photo"
-                            class="burgers-photo"
+                            class="item-image"
                         />
-                        <h3>Burger Doble</h3>
-                        <p>490$</p>
+                        <h3 class="item-title">Burger Doble</h3>
+                        <p class="item-price">490$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="cheddar all-items">
                         <img
                             src="https://www.liverpool-one.com/wp-content/uploads/2016/10/Byron-burger-e1584466269124.jpg"
                             alt="burger cheddar photo"
-                            class="burgers-photo"
+                            class="item-image"
                         />
-                        <h3>Burger Cheddar</h3>
-                        <p>550$</p>
+                        <h3 class="item-title">Burger Cheddar</h3>
+                        <p class="item-price">550$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="doble-cheddar all-items">
                         <img
                             src="https://images.unsplash.com/photo-1580372647279-e3af83eacec5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGRvYmxlJTIwY2hlZGRhciUyMGJ1cmdlcnxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                             alt="burger doble cheddar photo"
-                            class="burgers-photo"
+                            class="item-image"
                         />
-                        <h3>Burger Doble Cheddar</h3>
-                        <p>610$</p>
+                        <h3 class="item-title">Burger Doble Cheddar</h3>
+                        <p class="item-price">610$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
 
                     <div class="bebidas">Bebidas a elegir</div>
 
-                    <!-- agregando fotos de los drink items -->
-
                     <div class="coca-lata all-items">
                         <img
                             src="https://images.unsplash.com/photo-1514178255089-603d3a35b24a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuJTIwb2YlMjBjb2tlfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                             alt="can of coke photo"
-                            class="drinks-photo"
+                            class="item-image"
                         />
-                        <h3>Coca lata</h3>
-                        <p>60$</p>
+                        <h3 class="item-title">Coca lata</h3>
+                        <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="sevenup-lata all-items">
                         <img
                             src="https://st3.depositphotos.com/4021141/18747/i/600/depositphotos_187471326-stock-photo-7up-non-caffeinated-soft-drink.jpg"
                             alt="can of 7up photo"
-                            class="drinks-photo"
+                            class="item-image"
                         />
-                        <h3>7up lata</h3>
-                        <p>60$</p>
+                        <h3 class="item-title">7up lata</h3>
+                        <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="fanta-lata all-items">
                         <img
                             src="https://us.123rf.com/450wm/spflaum/spflaum1103/spflaum110300123/9158049-fanta-orange-drink-studio-shot-on-table-top.jpg?ver=6"
                             alt="can of fanta photo"
-                            class="drinks-photo"
+                            class="item-image"
                         />
-                        <h3>Fanta lata</h3>
-                        <p>60$</p>
+                        <h3 class="item-title">Fanta lata</h3>
+                        <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                     <div class="pepsi-lata all-items">
                         <img
                             src="https://harryandlarrys.square.site/uploads/1/3/1/2/131251354/s868400964849929034_p1180_i1_w676.jpeg"
                             alt="can of pepsi photo"
-                            class="drinks-photo"
+                            class="item-image"
                         />
-                        <h3>Pepsi lata</h3>
-                        <p>60$</p>
+                        <h3 class="item-title">Pepsi lata</h3>
+                        <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
                 </div>
