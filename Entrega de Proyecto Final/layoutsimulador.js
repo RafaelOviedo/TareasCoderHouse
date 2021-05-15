@@ -1,5 +1,5 @@
 // Listeners
-let removeCartItemBtns = document.getElementsByClassName("remove-btn");
+let removeCartItemBtns = document.getElementsByClassName(".remove-btn");
 for (let i = 0; i < removeCartItemBtns.length; i++) {
     let button = removeCartItemBtns[i];
     button.addEventListener("click", removeCartItems);
@@ -53,8 +53,12 @@ function addToCart(event) {
 }
 
 function purchased() {
-    alert("Gracias por su compra");
     let cartItems = document.getElementsByClassName("cart-box-items")[0];
+    if (!cartItems.hasChildNodes()) {
+        alert("Debe seleccionar al menos un elemento");
+    } else {
+        alert("Gracias por su compra");
+    }
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);
     }
@@ -115,18 +119,18 @@ function updateCartTotal() {
         let quantity = quantityElement.value;
         total += price * quantity;
     }
-    document.getElementsByClassName("totalPrice")[0].innerText = "$" + total;
+    $(".totalPrice").text("$" + total);
 }
 
 // funcionalidad del lateral bar
 function closeLateralBar() {
-    document.getElementById("lateral-bar").style.width = "0px";
-    document.getElementById("lateral-bar").style.borderLeft = "";
+    $("#lateral-bar").css("width", "0px");
+    $("#lateral-bar").css("border-left", "");
 }
 
 function openLateralBar() {
-    document.getElementById("lateral-bar").style.width = "400px";
-    document.getElementById("lateral-bar").style.borderLeft = "2px solid black";
-    document.getElementById("lateral-bar").style.borderBottom =
-        "2px solid black";
+    $("#lateral-bar").css("width", "425px");
+    $("#lateral-bar").css("borderLeft", "2px solid black");
+    $("#lateral-bar").css("border-bottom", "2px solid black");
 }
+
