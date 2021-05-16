@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="layoutsimulador.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- EMPIEZA LA NAVBAR -->
@@ -38,7 +39,7 @@
                 <strong class="totalTitle">Total:</strong>
                 <span class="totalPrice">$0</span>
             </div>
-            <button class="purchase-btn">Comprar</button>
+            <button class="purchase-btn">Purchase</button>
         </div>
         <!-- LATERAL BAR  -->
 
@@ -61,14 +62,13 @@
                 alt="pizza photo background"
             />
             <h1 id="welcome-text">
-                Bienvenido a "Nombre de la App", para hacer tu pedido presiona
-                comenzar!
+                Welcome to "App's name", to make your order press start!
             </h1>
         </section>
 
         <div id="button-box">
             <button id="start-button">
-                <a class="button-link" href="#choosing-section">Comenzar</a>
+                <a class="button-link" href="#choosing-section">Start</a>
             </button>
         </div>
 
@@ -85,8 +85,8 @@
                 />
 
                 <div id="items-box">
-                    <div class="titulo">Que vas a comer hoy?</div>
-                    <div class="pizzas">Pizzas a elegir</div>
+                    <div class="titulo">What are you going to eat today?</div>
+                    <div class="pizzas">Pizzas to choose</div>
 
                     <!-- definiendo items dentro del menu -->
 
@@ -97,7 +97,7 @@
                             class="item-image"
                             id="pizza-muzza"
                         />
-                        <h3 class="item-title">Muzzarella</h3>
+                        <h3 class="item-title">Mozzarella</h3>
                         <p class="item-price">490$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -107,7 +107,7 @@
                             alt="pizza napo photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Napolitana</h3>
+                        <h3 class="item-title">Neapolitan</h3>
                         <p class="item-price">530$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -127,12 +127,12 @@
                             alt="pizza jamon y morron photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Jamon y morron</h3>
+                        <h3 class="item-title">Ham and bell pepper</h3>
                         <p class="item-price">530$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
 
-                    <div class="burgers">Hamburguesas a elegir</div>
+                    <div class="burgers">Hamburgers to choose</div>
 
                     <div class="simple all-items">
                         <img
@@ -140,7 +140,7 @@
                             alt="burger simple photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Burger Simple</h3>
+                        <h3 class="item-title">Simple</h3>
                         <p class="item-price">420$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -150,7 +150,7 @@
                             alt="burger doble photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Burger Doble</h3>
+                        <h3 class="item-title">Double</h3>
                         <p class="item-price">490$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -160,7 +160,7 @@
                             alt="burger cheddar photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Burger Cheddar</h3>
+                        <h3 class="item-title">Cheddar</h3>
                         <p class="item-price">550$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -170,12 +170,12 @@
                             alt="burger doble cheddar photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Burger Doble Cheddar</h3>
+                        <h3 class="item-title">Double Cheddar</h3>
                         <p class="item-price">610$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
 
-                    <div class="bebidas">Bebidas a elegir</div>
+                    <div class="bebidas">Drinks to choose</div>
 
                     <div class="coca-lata all-items">
                         <img
@@ -183,7 +183,7 @@
                             alt="can of coke photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Coca lata</h3>
+                        <h3 class="item-title">Canned Coke</h3>
                         <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -193,7 +193,7 @@
                             alt="can of 7up photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">7up lata</h3>
+                        <h3 class="item-title">Canned 7up</h3>
                         <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -203,7 +203,7 @@
                             alt="can of fanta photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Fanta lata</h3>
+                        <h3 class="item-title">Canned Fanta</h3>
                         <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -213,7 +213,7 @@
                             alt="can of pepsi photo"
                             class="item-image"
                         />
-                        <h3 class="item-title">Pepsi lata</h3>
+                        <h3 class="item-title">Canned Pepsi</h3>
                         <p class="item-price">60$</p>
                         <button class="add-to-cart-btn">Add to cart</button>
                     </div>
@@ -244,15 +244,63 @@
                     excepturi officiis minus odio quis veniam. Nihil, aspernatur
                     cum quia cupiditate expedita eius.
                 </p>
+                <ul class="socialMediaBox">
+                    <li>
+                        <a target="_blank" href="https://codepen.io/dgtgnd">
+                            <img
+                                class="codepenLogo"
+                                src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png"
+                                alt="github logo"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            href="https://github.com/RafaelOviedo"
+                        >
+                            <img
+                                class="githubLogo"
+                                src="https://pngimg.com/uploads/github/github_PNG58.png"
+                                alt="github logo"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/dgtgnd/"
+                        >
+                            <img
+                                class="instagramLogo"
+                                src="https://img.icons8.com/ios-glyphs/452/instagram-circle.png"
+                                alt="github logo"
+                            />
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- TERMINA ABOUT US SECTION  -->
 
+        <!-- EMPIEZA NEW MENU SECTION  -->
+
+        <section class="new-menu-section">
+            <div class="menu-section-box">
+                <p class="new-list-p">Check the coming soon pizzas:</p>
+                <button class="check-btn">Check</button>
+                <div class="arrow">➡️</div>
+                <ol class="new-food-list"></ol>
+            </div>
+        </section>
+
+        <!-- TERMINA NEW MENU SECTION  -->
+
         <!-- EMPIEZA FOOTER  -->
 
         <footer id="footer">
-            <p>Proyecto para CoderHouse, por Rafael Oviedo.</p>
+            <p>Project for CoderHouse, by Rafael Oviedo.</p>
         </footer>
 
         <!-- TERMINA FOOTER  -->
