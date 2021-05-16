@@ -187,7 +187,7 @@ body {
 
 .purchase-btn {
     position: relative;
-    left: 30%;
+    left: 34%;
     width: 150px;
     height: 50px;
     background: #00d5e1;
@@ -198,7 +198,7 @@ body {
     outline: none;
     cursor: pointer;
 }
-#purchase-btn:active {
+.purchase-btn:active {
     background: aqua;
 }
 
@@ -207,8 +207,8 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 640px;
-    left: 1400px;
+    top: 85%;
+    left: 92.5%;
     margin: 0;
     padding: 0;
     width: 65px;
@@ -491,6 +491,78 @@ body {
     font-size: 25px;
 }
 
+.socialMediaBox {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    position: absolute;
+    top: 70%;
+    left: 24%;
+}
+
+.githubLogo,
+.codepenLogo,
+.instagramLogo {
+    background: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+/* NEW LIST FOOD SECTION */
+.new-menu-section {
+    width: 100%;
+    height: 20vh;
+    background: #ff5757;
+}
+
+.menu-section-box {
+    position: relative;
+    background: #ff5757;
+    left: 30%;
+    width: 700px;
+    height: 20vh;
+    overflow: hidden;
+}
+
+.new-list-p {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    margin: 0;
+    font-weight: bold;
+}
+
+.check-btn {
+    position: relative;
+    left: 18%;
+    top: 45%;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+.check-btn:active {
+    background: lightgray;
+}
+
+.arrow {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    width: 0px;
+}
+
+.list-item {
+    position: relative;
+    left: 60%;
+    top: -75px;
+    font-weight: bold;
+}
+
 /* FOOTER */
 
 footer {
@@ -505,6 +577,6 @@ footer {
 footer p {
     padding: 10px;
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
 }
