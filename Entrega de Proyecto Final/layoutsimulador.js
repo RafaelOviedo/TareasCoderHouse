@@ -55,9 +55,9 @@ function addToCart(event) {
 function purchased() {
     let cartItems = document.getElementsByClassName("cart-box-items")[0];
     if (!cartItems.hasChildNodes()) {
-        alert("Debe seleccionar al menos un elemento");
+        alert("You must choose at least one item");
     } else {
-        alert("Gracias por su compra");
+        alert("Thanks for your purchase");
     }
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);
@@ -73,7 +73,7 @@ function addRowToCart(title, price, imageSrc) {
     let cartItemNames = cartItems.getElementsByClassName("cart-item-title");
     for (let i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText === title) {
-            alert("Este articulo ya ha sido elegido");
+            alert("This item has already been chosen");
             return;
         }
     }
@@ -129,8 +129,25 @@ function closeLateralBar() {
 }
 
 function openLateralBar() {
-    $("#lateral-bar").css("width", "425px");
+    $("#lateral-bar").css("width", "400px");
     $("#lateral-bar").css("borderLeft", "2px solid black");
     $("#lateral-bar").css("border-bottom", "2px solid black");
 }
 
+// Llamada a la API
+
+$(".check-btn").click(function () {
+    $(".new-food-list").empty();
+    $.get(
+        "https://private-anon-f8405e8ba0-pizzaapp.apiary-mock.com/restaurants/restaurantId/menu?category=Pizza&orderBy=rank",
+        function (data) {
+            data.forEach((item) => {
+                $(".new-food-list").append(
+                    "<li class='list-item'>" +
+                        JSON.stringify(item.name) +
+                        "</li>"
+                );
+            });
+        }
+    );
+});
